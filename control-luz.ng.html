@@ -1,0 +1,50 @@
+<div class="container" ng-init="grafico()">
+    <header>
+        <h1 align="center">Sistema Control Energetico</h1>
+    </header>
+
+    <div class="row">
+        <div class="col-md-3 div-left" style="text-align: center">
+            <p style="min-height: 40px"></p>
+            <p ng-click="sce.sistem = !sce.sistem;apagarSistema()" ng-if="!sce.sistem"><img class="img"   ng-src="/img/off_system.png" ></p>
+            <p ng-click="sce.sistem = !sce.sistem;apagarSistema()" ng-if="sce.sistem"><img class="img"  ng-src="/img/on_system.png" ></p>
+            <h4 style="color: white" align="center">Encendido Sistema</h4>
+        </div>
+        <div class="col-md-3" style="text-align: center">
+
+            <p style="min-height: 50px"><img class="img" ng-show="sce.exterior"  src="/img/icon_lights.png"></p>
+            <p style="min-height: 125px"><img class="img" src="/img/lights_front.png"></p>
+            <p ng-click="!sce.sistem || (sce.exterior = !sce.exterior)" ng-if="!sce.exterior"><img class="img" src="/img/off_lights.png"></p>
+            <p ng-click="!sce.sistem || (sce.exterior = !sce.exterior)" ng-if="sce.exterior"><img class="img" src="/img/on_lights.png"></p>
+            <h4 style="color: white" align="center">Iluminacion Exterior</h4>
+        </div>
+        <div class="col-md-3" style="text-align: center">
+
+            <p style="min-height: 50px"><img ng-show="sce.dor1" class="img" src="/img/icon_lights.png"></p>
+            <p style="min-height: 125px"><img class="img" src="/img/lights_room1.png"></p>
+            <p ng-click="!sce.sistem || (sce.dor1 = !sce.dor1)" ng-if="!sce.dor1"><img class="img" src="/img/off_lights.png"></p>
+            <p ng-click="!sce.sistem || (sce.dor1 = !sce.dor1)" ng-if="sce.dor1"><img class="img" src="/img/on_lights.png"></p>
+            <h4 style="color: white" align="center">Iluminacion Dormitorio 1</h4>
+        </div>
+        <div class="col-md-3" style="text-align: center">
+
+            <p style="min-height: 50px"><img ng-show="sce.dor2" class="img" src="/img/icon_lights.png"></p>
+            <p style="min-height: 125px"><img class="img" src="/img/lights_room2.png"></p>
+            <p ng-click="!sce.sistem || (sce.dor2 = !sce.dor2)" ng-if="!sce.dor2"><img class="img" src="/img/off_lights.png"></p>
+            <p ng-click="!sce.sistem || (sce.dor2 = !sce.dor2)" ng-if="sce.dor2"><img clasmetes="img" src="/img/on_lights.png"></p>
+            <h4 style="color: white" align="center">Iluminacion Dormitorio 2</h4>
+        </div>
+
+    </div>
+    <hr class="featurette-divider">
+    <div class="row">
+        <div class="col-md-6">
+            <meteor-include src="hello"></meteor-include>
+        </div>
+        <div class="col-md-6" style="height: 100%">
+            <div style="background-color: black;height: 200px;width:100%;margin-top: 20%;padding:40px"><div style="background-color: #96C631;height: 110px;"><h1 class="ng-binding" style="padding: 4%;margin-right: -2%;text-align: center;font-size: 74px;">{{ sce.voltajeActual }}</h1></div></div>
+
+        </div>
+
+    </div>
+</div>

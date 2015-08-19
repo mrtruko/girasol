@@ -1,0 +1,96 @@
+/* CSS declarations go here */
+body {
+    font-family: sans-serif;
+    background-color: #007C9E;
+    background-image: linear-gradient(to bottom, #000000, #007C9E 100%);
+    background-attachment: fixed;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    padding: 0;
+    margin: 0;
+
+    font-size: 14px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    min-height: 100%;
+    background: #6B6B6B;
+    background-image: linear-gradient(to bottom, #6B6B6B, #4B656C 100%);
+    border-radius: 25px;
+    border: 10px solid #00242E;
+    padding: 20px;
+}
+header {
+
+    padding: 20px 15px 15px 15px;
+    position: relative;
+}
+
+#login-buttons {
+    display: block;
+}
+
+h1 {
+    font-size: 1.5em;
+    margin: 0;
+    margin-bottom: 10px;
+    margin-right: 1em;
+    color: white;
+}
+
+form {
+    margin-top: 10px;
+    margin-bottom: -10px;
+    position: relative;
+}
+
+.new-task input {
+    box-sizing: border-box;
+    padding: 10px 0;
+    background: transparent;
+    border: none;
+    width: 100%;
+    padding-right: 80px;
+    font-size: 1em;
+}
+
+.new-task input:focus{
+    outline: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    background: white;
+}
+
+.delete {
+    float: right;
+    font-weight: bold;
+    background: none;
+    font-size: 1em;
+    border: none;
+    position: relative;
+}
+.div-left {
+    border-right: 1px solid #fff;
+}
+.row {
+    display: table;
+}
+
+.row [class*="col-"] {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+}
+svg {
+    width: 550px !important;
+}
